@@ -1,6 +1,10 @@
 # Kubernetes 101 — Interactive Terminal Lab
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-blue?logo=github)](https://abderrazzakchabab.github.io/kubernetes-101-lab/)
+
 A zero-dependency, client-side Kubernetes learning application. Students practice `kubectl` commands in a simulated terminal (Xterm.js) that manipulates an in-memory cluster state model — no real cluster, Docker, or backend required.
+
+**[▶ Try the Live Demo](https://abderrazzakchabab.github.io/kubernetes-101-lab/)**
 
 ## Quick Start
 
