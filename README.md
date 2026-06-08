@@ -18,6 +18,45 @@ python3 -m http.server 8080
 
 Alternatively, open `index.html` directly — note that Xterm.js loads from CDN, so an internet connection is needed on first load.
 
+## Getting Started
+
+The app opens to **Module 1, Lesson 1 — Your First Pod**. Follow these steps in the simulated terminal at the bottom of the screen:
+
+**1. Create a Pod manifest** — paste this into the terminal:
+
+```bash
+echo 'apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.25
+      ports:
+        - containerPort: 80' > pod.yaml
+```
+
+**2. Apply it to the cluster:**
+
+```bash
+kubectl apply -f pod.yaml
+```
+
+You should see: `pod/nginx-pod created`
+
+**3. Verify it's running:**
+
+```bash
+kubectl get pods
+```
+
+**4. Click "Check My Work"** — the verifier confirms the Pod exists and is Running, then auto-advances to Lesson 2.
+
+Each lesson follows this pattern: read the explanation, complete the task in the terminal, and click **Check My Work**. Use **Show Hint** if you get stuck, or **Reset Cluster** to start fresh.
+
 ## Architecture
 
 ```
